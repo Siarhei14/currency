@@ -5,6 +5,7 @@
 #include "constants.h"
 #include "filter.h"
 #include "sort.h"
+#include "processing.h"
 
 using namespace std;
 
@@ -48,6 +49,8 @@ int main()
         {
             output(currency_list[i]);
         }
+        cout << '\n';
+        cout << get_max_difference(currency_list, size) << '\n';
         cout << '\n';
         cout << "Фильтр по Беларусбанку" << '\n';
         currency_filter = filter(currency_list, size, filter_currency_by_bank_name, filter_size);
