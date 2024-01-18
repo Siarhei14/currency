@@ -4,6 +4,7 @@
 #include "file_reader.h"
 #include "constants.h"
 #include "filter.h"
+#include "sort.h"
 
 using namespace std;
 
@@ -60,6 +61,32 @@ int main()
         for (int i = 0; i < filter_size; i++)
         {
             output(currency_filter[i]);
+        }
+        cout << '\n';
+        cout << "Сортировка пузырьком 1" << '\n';
+        bubble_sort(currency_list, size, compare_by_difference);
+        for (int i = 0; i < size; i++)
+        {
+            output(currency_list[i]);
+        }        cout << '\n';
+        cout << "Сортировка пузырьком 2" << '\n';
+        bubble_sort(currency_list, size, compare_by_bank_name);
+        for (int i = 0; i < size; i++)
+        {
+            output(currency_list[i]);
+        }
+        cout << '\n';
+        cout << "Сортировка слиянием 1" << '\n';
+        merge_sort(currency_list, 0, size - 1, compare_by_difference);
+        for (int i = 0; i < size; i++)
+        {
+            output(currency_list[i]);
+        }        cout << '\n';
+        cout << "Сортировка слиянием 2" << '\n';
+        merge_sort(currency_list, 0, size - 1, compare_by_bank_name);
+        for (int i = 0; i < size; i++)
+        {
+            output(currency_list[i]);
         }
         for (int i = 0; i < size; i++)
         {
