@@ -127,7 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="currency_program.cpp" />
+    <Text Include="data.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="currency_structure.h" />
+    <ClInclude Include="file_reader.h" />
+    <ClInclude Include="filter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="currency_programm.cpp" />
+    <ClCompile Include="file_reader.cpp" />
+    <ClCompile Include="filter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
